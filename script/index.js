@@ -3,6 +3,12 @@ const createElement = (arr)=>{
    return (htmlElement.join(" "))
 }
 
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-EN"; // English
+  window.speechSynthesis.speak(utterance);
+}
+
 const manageSpinner = (status)=>{
     if(status== true){
         document.getElementById("spinner").classList.remove("hidden")
@@ -89,6 +95,9 @@ const url= (`https://openapi.programming-hero.com/api/level/${id}`)
 fetch(url)
 .then(res => res.json())
 .then(data => {
+
+    //  allWords = data.data; // ⭐ words save
+
     removeActive() //remove all active class
     const clickBtn = document.getElementById(`lesson-btn-${id}`)
     // console.log(clickBtn)
@@ -133,7 +142,8 @@ const displayLevelWord = (words)=>{
             <div class="text-xl font-medium font-bangla">${word.meaning ? word.meaning:"অর্থ পাওয়া যায়নি"}/ ${word.pronunciation}</div>
             <div class="flex justify-between items-center ">
                 <button onclick="loadWordDetail(${word.id})" class="btn bg-[#1A91FF10] hover:bg-[#1A91FF80]"><i class="fa-solid fa-circle-info"></i></button>
-                <button class="btn bg-[#1A91FF10] hover:bg-[#1A91FF80]"><i class="fa-solid fa-volume-high"></i></button>
+
+                <button onclick="pronounceWord('${word.word}')" class="btn bg-[#1A91FF10] hover:bg-[#1A91FF80]"><i class="fa-solid fa-volume-high"></i></button>
             </div>
         </div>
         `
@@ -161,3 +171,20 @@ levelContainer.appendChild(btnDiv);
 
 }
 loadLessons()
+
+document.getElementById("btn-search").addEventListener("click",()=>{
+    removeActive()
+const input = document.getElementById("input-search");
+const searchValue = input.value.trim().toLowerCase();
+
+fetch('https://openapi.programming-hero.com/api/words/all')
+.then((res)=>res.json())
+.then((data)=>{
+    const allwords = data.data
+    const filterWords = allwords.filter(word=>word.word.toLowerCase().includes(searchValue))
+    displayLevelWord(filterWords)
+})
+})
+
+
+
