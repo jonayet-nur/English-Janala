@@ -43,11 +43,11 @@
           </div>
           <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
             <li>
-              <a href="" class=""><i class="fa-solid fa-circle-question"></i> FAQ</a>
+              <a href="#faq" class=""><i class="fa-solid fa-circle-question"></i> FAQ</a>
             </li>
 
             <li>
-              <a href="" class=""><i class="fa-solid fa-book-open"></i> Learn</a>
+              <a href="#learn" class=""><i class="fa-solid fa-book-open"></i> Learn</a>
             </li>
 
             <li>
@@ -64,11 +64,11 @@
       <div class="navbar-end hidden lg:flex">
         <ul class="menu menu-horizontal px-1 space-x-6">
           <li>
-            <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+            <a href="#faq" class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i> FAQ</a>
           </li>
 
           <li>
-            <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i> Learn</a>
+            <a href="#learn" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i> Learn</a>
           </li>
 
           <li>
@@ -103,7 +103,7 @@
   </section>
 
   <!-- learn vocabularies section -->
-  <section>
+  <section id="learn">
     <h2 class="text-4xl font-bold mb-5 text-center"><span class="text-sky-500">Let's</span> Learn Vocabularies</h2>
     <!-- this container store for button div with js for make -->
     <div id="level-container" class="flex justify-center gap-5 flex-wrap">
@@ -164,9 +164,98 @@
   </dialog>
 
 
+<!-- faq section -->
+ 
+<section class="w-11/12 mx-auto py-16 " id="faq">
+
+<h2 class="text-center text-3xl font-bold mb-10">
+  <span class="text-sky-500">Frequently</span> Asked Questions
+</h2>
+
+
+<!-- FAQ Container -->
+<div class="space-y-4">
+
+<!-- FAQ 1 -->
+<div class="collapse collapse-plus  bg-white shadow-sm">
+  <input type="checkbox" name="faq" />
+  <div class="collapse-title text-lg font-medium">
+    <h2>1. How can I start learning English on this website?</h2>
+  </div>
+  <div class="collapse-content text-gray-500">
+    <p>
+      You can start by exploring our beginner lessons, interactive exercises,
+      and quizzes. We also offer structured courses to guide you step by step.
+    </p>
+  </div>
+</div>
+
+
+<!-- FAQ 2 -->
+<div class="collapse collapse-plus bg-white shadow-sm">
+  <input type="checkbox" name="faq" />
+  <div class="collapse-title text-lg font-medium">
+   <h2> 2. Is this website free to use?</h2>
+  </div>
+  <div class="collapse-content text-gray-500">
+    <p>
+      Yes, most of our lessons are free. Some advanced features may require
+      registration.
+    </p>
+  </div>
+</div>
+
+
+<!-- FAQ 3 -->
+<div class="collapse collapse-plus bg-white shadow-sm">
+  <input type="checkbox" name="faq" />
+  <div class="collapse-title text-lg font-medium">
+    <h2>3. Do I need to create an account?</h2>
+  </div>
+  <div class="collapse-content text-gray-500">
+    <p>
+      Creating an account allows you to track your progress and access more
+      features.
+    </p>
+  </div>
+</div>
+
+
+<!-- FAQ 4 -->
+<div class="collapse collapse-plus bg-white shadow-sm">
+  <input type="checkbox" name="faq" />
+  <div class="collapse-title text-lg font-medium">
+    <h2>4. How can I build my English vocabulary?</h2>
+  </div>
+  <div class="collapse-content text-gray-500">
+    <p>
+      Practice daily with vocabulary exercises, reading lessons and quizzes.
+    </p>
+  </div>
+</div>
+
+
+<!-- FAQ 5 -->
+<div class="collapse collapse-plus bg-white shadow-sm">
+  <input type="checkbox" name="faq" />
+  <div class="collapse-title text-lg font-medium">
+   <h2> 5. Do you offer certificates for completed courses?</h2>
+  </div>
+  <div class="collapse-content text-gray-500">
+    <p>
+      Yes, certificates are available after successfully completing courses.
+    </p>
+  </div>
+</div>
+
+</div>
+
+</section>
+
+
   <!-- footer section -->
-<footer class="w-11/12 mx-auto   border-t-2 border-pink-100 py-10 flex-col flex md:flex-row justify-between items-center text-center md:text-left">
-  <div class=" space-y-3">
+<footer class="  bg-sky-100 p-8  border-t-2 border-pink-100 py-10 flex-col flex md:flex-row justify-between items-center text-center md:text-left mb-5">
+  <div class=" space-y-3 ">
     <div class="flex justify-center md:justify-start">
       <span class="text-lg font-bold">English</span>
           <img src="assets/logo.png" alt="" class="w-[30px]">

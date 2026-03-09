@@ -186,5 +186,3 @@ fetch('https://openapi.programming-hero.com/api/words/all')
 })
 })
 
-
-
